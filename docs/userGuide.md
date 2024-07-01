@@ -87,7 +87,8 @@ Return Value:
 Using `digitalRead()` allows Arduino programs to respond to the state changes of digital inputs, enabling interactive behaviors with external components like buttons, switches, and sensors.
 
 ## 5. `sumBit()` Function
-Adds the bits and stores the result:
+Function that performs bit-bit addition using the `XOR` logic gate.
+
 ```cpp
 void sumBit(){
   for(int i = 0; i < 4; ++i){
@@ -101,7 +102,34 @@ void sumBit(){
 }
 ```
 
-## calculateCarryBit() Function
+An `XOR` (`exclusive OR`) gate is a type of digital logic gate that outputs true or high (1) only when the number of true or high inputs is odd. For two inputs, this means the output is true when the inputs are different, and false or low (0) when the inputs are the same. 
+
+### Truth Table
+
+| Input A | Input B | Output (A XOR B) |
+|---------|---------|------------------|
+|    0    |    0    |        0         |
+|    0    |    1    |        1         |
+|    1    |    0    |        1         |
+|    1    |    1    |        0         |
+
+When both inputs are 0 or both are 1, the output is 0.  
+When one input is 0 and the other is 1, the output is 1.
+
+### Symbol
+
+The `XOR` gate is typically represented by a symbol similar to the `OR` gate but with an extra curved line on the input side. 
+
+In C++ language is represented by the symbol `^` .
+
+### Boolean Expression
+
+The Boolean expression for the XOR gate with inputs A and B is:
+> *A ⊕ B = (A ⋅ <span style="text-decoration:overline">B</span>) + (<span style="text-decoration:overline">A</span> ⋅ B)*
+- This expression states that the output is true if A is true and B is false, or A is false and B is true.
+
+
+## 6. `calculateCarryBit()` Function
 Calculates the carry bit:
 ```cpp
 void calculateCarryBit(int i){
@@ -118,23 +146,7 @@ void calculateCarryBit(int i){
 - `|` (OR): Used to determine if a carry should be propagated.
 
 
-## readNibble() Function
-Reads the input nibbles:
-```cpp
-void readNibble(){
-  if(digitalRead(3) == 0){
-    for(int i = 0; i < 4; ++i){
-      nibble_A[i] = digitalRead(i + 4);
-    }    
-  } else if(digitalRead(3) == 1){
-    for(int i = 0; i < 4; ++i){
-      nibble_B[i] = digitalRead(i + 4);
-    }        
-  }
-}
-```
-
-## showOutput() Function
+## 7. `showOutput()` Function
 Displays the sum result:
 ```cpp
 void showOutput(){
