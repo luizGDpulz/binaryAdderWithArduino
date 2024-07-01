@@ -7,8 +7,8 @@ Binary Adder With Arduino ©️ 2024 by Luiz Gustavo Dias Pulz is licensed under
 
 ## 🔗 Documentation Links:
 
-- [📰 Overview](./docs/overview.md)
-- [👤 User Guide](./docs/userGuide.md)
-- [⬇️ Installation Guide](./docs/installationGuide.md)
-- [⚙️ Simulator](./dependences/simulator.md)
-- [🔑 License](./LICENSE)
+- 📰 [Overview](./docs/overview.md)
+- 👤 [User Guide](./docs/userGuide.md)
+- ⬇️ [Installation Guide](./docs/installationGuide.md)
+- ⚙️ [Simulator](./dependences/simulator.md)
+- 🔑 [License](./LICENSE)
