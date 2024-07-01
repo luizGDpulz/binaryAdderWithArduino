@@ -14,4 +14,4 @@
 2. Connect the buttons to the input pins (2 and 3).
 3. Connect the input bits to the pins (4 to 7).
 4. Use pull-down resistors to ensure LOW states when the buttons are not pressed.
-5. Connect the Arduino to the computer and upload the code.
+5. Connect the Arduino to the computer and upload the [Binary Adder Code](../binaryAdder.cpp).
