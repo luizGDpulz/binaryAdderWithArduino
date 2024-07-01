@@ -18,4 +18,4 @@ To simulate this project, you can use Tinkercad. You can Access the the project 
 ## 🔑 License
 
 Tinkercad is a free tool for circuit simulation.  
-For more information on the terms of use, visit the [official Tinkercad terms of service page](https://www.autodesk.com/company/legal-notices-trademarks/terms-of-service).
+For more information on the terms of use, visit the [official Tinkercad terms of service page](https://www.tinkercad.com/terms).
