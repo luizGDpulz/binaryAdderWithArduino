@@ -1,11 +1,10 @@
 # Installation Guide 📥
 
 ## 🔌 Necessary Components
-- 1 Arduino Uno
+- 1 Arduino Uno (or Another)
 - 8 LEDs
 - 8 resistors (220Ω)
 - 2 buttons
-- 8 pull-down resistors (10kΩ)
 - Jumper wires
 - Breadboard
 
