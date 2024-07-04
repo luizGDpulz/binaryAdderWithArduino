@@ -1,9 +1,6 @@
 # User Guide 👤
 
-## Code Explanation
-An in-depth explanation of code intelligence, that is, how the adder practically sums the bits and returns the result to us with LEDs lighting up or turning off.
-
-
+Here you will find a detailed demonstration of the code intelligence, the heart of our project. This guide is structured to facilitate understanding, providing information and explanations about the C++ language used on Arduino platforms. It presents a solid foundation on the structure of the code for these microcontrollers, including explanations of the main dedicated functions of Arduino.
 
 ## 1. Declaration of Global Variables
 Declares global variables that can be accessed in any scope of the program.
@@ -125,7 +122,9 @@ In C++ language is represented by the symbol `^` .
 ### Boolean Expression
 
 The Boolean expression for the XOR gate with inputs A and B is:
-> *A ⊕ B = (A ⋅ <span style="text-decoration:overline">B</span>) + (<span style="text-decoration:overline">A</span> ⋅ B)*
+
+$ A \oplus B = (A \cdot \overline{B}) + (\overline{A} \cdot B) $
+
 - This expression states that the output is true if A is true and B is false, or A is false and B is true.
 
 
@@ -140,14 +139,38 @@ void calculateCarryBit(int i){
   }
 }
 ```
-### Logical Operators in the sumBit() Function
-- `^` (XOR): Used to add bits without carry.
-- `&` (AND): Used to check for the presence of carry.
-- `|` (OR): Used to determine if a carry should be propagated.
 
+The function calculates the carry bit for the addition of the `i` bits of `nibble_A` and `nibble_B`, considering the current carry bit.
+
+### Bitwise `AND` Operation (`&`)
+* 
+  ```cpp
+  nibble_A[i] & nibble_B[i]
+  ``` 
+
+  Checks if both bits at position `i` in `nibble_A` and `nibble_B` are 1.
+
+*  
+  ```cpp
+  nibble_A[i] & carryBit
+  ```
+  Checks if the bit at position `i` in `nibble_A` and the current `carry bit`are both 1.
+
+* 
+  ```cpp
+  nibble_B[i] & carryBit
+  ``` 
+  Checks if the bit at position `i` in `nibble_B` and the current `carry bit` are both 1.
+
+### Bitwise `OR` Operation (`|`)
+Combines the results of the above AND operations. The OR operation will result in 1 if any of the AND operations result in 1, meaning that any pair of bits or the current carry bit results in a carry.  
+
+### Conditional Statement
+If any of the combined conditions (AND results) are true (1), it means that a carry should be generated for the next higher bit. Therefore, carryBit is set to 1.
+If none of the conditions are true (all AND results are 0), no carry is generated, and carryBit is set to 0.
 
 ## 7. `showOutput()` Function
-Displays the sum result:
+Displays the sum result.
 ```cpp
 void showOutput(){
   for(int i = 0; i < 4; ++i){
