@@ -14,16 +14,19 @@ The `setup()` configures the Arduino pins.
 
 ```cpp
 void setup(){
-  pinMode(2, INPUT);   // button to add the nibbles
-  pinMode(3, INPUT);   // button to switch the nibbles
-  pinMode(4, INPUT);   // bit 2^0
-  pinMode(5, INPUT);   // bit 2^1
-  pinMode(6, INPUT);   // bit 2^2
-  pinMode(7, INPUT);   // bit 2^3
-  pinMode(8, OUTPUT);  // bit 2^0
-  pinMode(9, OUTPUT);  // bit 2^1
+  pinMode(2, INPUT); // button to add the nibbles
+  pinMode(3, INPUT); // button to switch the nibbles
+
+  pinMode(4, INPUT); // bit 2^0
+  pinMode(5, INPUT); // bit 2^1
+  pinMode(6, INPUT); // bit 2^2
+  pinMode(7, INPUT); // bit 2^3
+
+  pinMode(8, OUTPUT); // bit 2^0
+  pinMode(9, OUTPUT); // bit 2^1
   pinMode(10, OUTPUT); // bit 2^2
   pinMode(11, OUTPUT); // bit 2^3
+  
   pinMode(12, OUTPUT); // bit 2^4 or carry bit
 }
 ```
@@ -171,6 +174,7 @@ If none of the conditions are true (all AND results are 0), no carry is generate
 
 ## 7. `showOutput()` Function
 Displays the sum result.
+
 ```cpp
 void showOutput(){
   for(int i = 0; i < 4; ++i){
@@ -179,3 +183,21 @@ void showOutput(){
   digitalWrite(12, carryBit);
 }
 ```
+
+`digitalWrite()` function in Arduino programming is used to set a digital pin to either HIGH or LOW. This function is crucial for controlling various electronic components such as LEDs, motors, and other devices that can be switched on or off.
+
+### Syntax
+
+```cpp
+digitalWrite(pin, value);
+```
+
+* `pin` : The number of the digital pin you want to control.
+
+* `value`: The state you want to set the pin to. It can be either HIGH (on) or LOW (off).
+
+### Parameters
+
+* `pin` : The number of the digital pin on the Arduino board you are controlling. It must be a valid digital pin number for your specific Arduino model.
+
+* `value` : The desired state of the pin. HIGH sets the pin to 5V (or 3.3V on 3.3V boards), and LOW sets the pin to 0V.
