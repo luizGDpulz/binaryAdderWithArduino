@@ -126,7 +126,7 @@ In C++ language is represented by the symbol `^` .
 
 The Boolean expression for the XOR gate with inputs A and B is:
 
-$ A \oplus B = (A \cdot \overline{B}) + (\overline{A} \cdot B) $
+$`A \oplus B = (A \cdot \overline{B}) + (\overline{A} \cdot B)`$
 
 - This expression states that the output is true if A is true and B is false, or A is false and B is true.
 
