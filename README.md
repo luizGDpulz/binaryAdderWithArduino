@@ -12,3 +12,4 @@ Binary Adder With Arduino ©️ 2024 by Luiz Gustavo Dias Pulz is licensed under
 - 📥 [Installation Guide](./docs/installationGuide.md)
 - ⚙️ [Simulator](./dependences/simulator.md)
 - 🔑 [License](./LICENSE)
+- 📺 [Slide Show](./docs/binaryAdderWithArduinoPresentation.pdf)
